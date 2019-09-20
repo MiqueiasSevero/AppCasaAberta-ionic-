@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>plugin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <button (click)="tirarFoto()">Tirar Fotos</button>
+    <button (click)="localizacao()">Localização</button>
+    <h1>Fotos</h1>
+    <img *ngFor= "let item of base64Image" src="{{item}}">
+
+</ion-content>
