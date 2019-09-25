@@ -5,9 +5,13 @@
 </ion-header>
 
 <ion-content>
-    <button (click)="tirarFoto()">Tirar Fotos</button>
-    <button (click)="localizacao()">Localização</button>
+    
+    <ion-icon (click)="tirarFoto()" name="camera"></ion-icon>
     <h1>Fotos</h1>
-    <img *ngFor= "let item of base64Image" src="{{item}}">
 
+      <div *ngFor= "let item of base64Image" >
+          <img  src="{{item}}">
+          <p>{{geolocalizacao.lati}}</p>
+          <p>{{geolocalizacao.long}}</p>
+    </div>
 </ion-content>
